@@ -7,9 +7,9 @@ const Home = () => {
     return (
         <>
             <Head title="Home" />
-            <div className="flex items-center justify-center px-2 grow sm:px-0">
-                <div className="flex items-center justify-center">
-                    <div className="flex flex-col w-[40%]">
+            <div className="flex items-center justify-center px-2 my-4 grow sm:px-0">
+                <div className="flex flex-col-reverse items-center justify-center lg:flex-row">
+                    <div className="flex flex-col w-full sm:w-[90%] lg:w-[40%]">
                         <span className="text-[18px] 2xl:text-[22px] text-emerald-400">
                             Hello 👋🏻, I am
                         </span>
@@ -67,7 +67,7 @@ const Home = () => {
                             </button>
                         </div>
                     </div>
-                    <div class="w-[40%] from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
+                    <div class="w-full from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] sm:w-[90%] lg:w-[40%]">
                         <div class="flex flex-row">
                             <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
                             <div class="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>

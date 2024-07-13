@@ -1,9 +1,10 @@
-import { Link } from "@inertiajs/react";
+import { Link, usePage } from "@inertiajs/react";
 import { useState } from "react";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 export default () => {
     const [darkMode, setDarkMode] = useState(true);
+    const { component } = usePage();
 
     const toggleDarkMode = () => {
         setDarkMode((dark) => !dark);
@@ -25,7 +26,9 @@ export default () => {
                         <li>
                             <Link
                                 href="/about"
-                                className="px-4 transition-colors duration-300 hover:text-pink-600"
+                                className={`px-4 transition-colors duration-300 hover:text-pink-600 ${
+                                    component == "About" ? "text-pink-600" : ""
+                                }`}
                             >
                                 ABOUT
                             </Link>
@@ -57,7 +60,11 @@ export default () => {
                         <li>
                             <Link
                                 href="/projects"
-                                className="px-4 transition-colors duration-300 hover:text-pink-600"
+                                className={`px-4 transition-colors duration-300 hover:text-pink-600 ${
+                                    component == "Projects"
+                                        ? "text-pink-600"
+                                        : ""
+                                }`}
                             >
                                 PROJECTS
                             </Link>
@@ -65,7 +72,11 @@ export default () => {
                         <li>
                             <Link
                                 href="/contact"
-                                className="px-4 transition-colors duration-300 hover:text-pink-600"
+                                className={`px-4 transition-colors duration-300 hover:text-pink-600 ${
+                                    component == "Contact"
+                                        ? "text-pink-600"
+                                        : ""
+                                }`}
                             >
                                 CONTACT
                             </Link>
